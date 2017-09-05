@@ -1,9 +1,9 @@
 Citizen.CreateThread( function()
-updatePath = "/Bluethefurry/initialdspeedo-fivem" -- your git user/repo path
-resourceName = "Initial D Speedometer ("..GetCurrentResourceName()..")" -- the resource name
+updatePath = "/Bluethefurry/FiveM-Resource-Version-Check-Thing" -- your git user/repo path
+resourceName = "FiveM-Resource-Version-Check-Thing ("..GetCurrentResourceName()..")" -- the resource name
 
 function checkVersion(err,responseText, headers)
-	curVersion = LoadResourceFile(GetCurrentResourceName(), "version")
+	curVersion = LoadResourceFile(GetCurrentResourceName(), "version") -- make sure the "version" file actually exists in your resource root!
 
 	if curVersion ~= responseText and tonumber(curVersion) < tonumber(responseText) then
 		print("\n###############################")
